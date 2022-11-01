@@ -16,8 +16,20 @@
         </thead>
         <tbody>
             {% for item in rows %}
-            {{datetime.strptime(item[2], '%Y-%m-%d %H:%M:%S').strftime("%H:%M")}}
+            <tr>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.start}}
+                </td>
+                <td>
+                    {{item.end}}
+                </td>
+            </tr>
+
             {% endfor %}
+
             <!-- loop here to create rows -->
         </tbody>
     </table>
