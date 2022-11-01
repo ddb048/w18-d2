@@ -7,25 +7,42 @@
 <body>
     <h1>Calendar working</h1>
     <form method="post" action="/">
+        {{form.csrf_token}}
         <div>
             {{form.name.label}}
             {{form.name(size=32)}}
+
+            {% if form.name.errors %}
+            <ul class="errors">
+                {% for error in form.name.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
         <div>
-            {{form.start_datetimeD.label}}
-            {{form.start_datetimeD(size=32)}}
+            {{form.start_date.label}}
+            {{form.start_date(size=32)}}
         </div>
         <div>
-            {{form.start_datetimeT.label}}
-            {{form.start_datetimeT(size=32)}}
+            {{form.start_time.label}}
+            {{form.start_time(size=32)}}
         </div>
         <div>
-            {{form.end_datetimeD.label}}
-            {{form.end_datetimeD(size=32)}}
+            {{form.end_date.label}}
+            {{form.end_date(size=32)}}
+
+            {% if form.end_date.errors %}
+            <ul class="errors">
+                {% for error in form.end_date.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
         <div>
-            {{form.end_datetimeT.label}}
-            {{form.end_datetimeT(size=32)}}
+            {{form.end_time.label}}
+            {{form.end_time(size=32)}}
         </div>
         <div>
             {{form.description.label}}
