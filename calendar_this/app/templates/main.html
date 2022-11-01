@@ -6,6 +6,40 @@
 
 <body>
     <h1>Calendar working</h1>
+    <form method="post" action="/">
+        <div>
+            {{form.name.label}}
+            {{form.name(size=32)}}
+        </div>
+        <div>
+            {{form.start_datetimeD.label}}
+            {{form.start_datetimeD(size=32)}}
+        </div>
+        <div>
+            {{form.start_datetimeT.label}}
+            {{form.start_datetimeT(size=32)}}
+        </div>
+        <div>
+            {{form.end_datetimeD.label}}
+            {{form.end_datetimeD(size=32)}}
+        </div>
+        <div>
+            {{form.end_datetimeT.label}}
+            {{form.end_datetimeT(size=32)}}
+        </div>
+        <div>
+            {{form.description.label}}
+            {{form.description(size=32)}}
+        </div>
+        <div>
+            {{form.private.label}}
+            {{form.private(size=32)}}
+        </div>
+        <div>
+            {{form.submit(size=32)}}
+        </div>
+        <!-- to make your form           -->
+    </form>
     <table>
         <thead>
             <tr>
