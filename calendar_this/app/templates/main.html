@@ -6,6 +6,21 @@
 
 <body>
     <h1>Calendar working</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in rows %}
+            {{datetime.strptime(item[2], '%Y-%m-%d %H:%M:%S').strftime("%H:%M")}}
+            {% endfor %}
+            <!-- loop here to create rows -->
+        </tbody>
+    </table>
 </body>
 
 </html>
